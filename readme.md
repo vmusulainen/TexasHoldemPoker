@@ -1,6 +1,5 @@
 # General
 The application is emulator of Texas Hold'em Poker.
-
 The application was written as exercise from potential employer.
 
 Exercise requirements are: 
@@ -8,15 +7,14 @@ Exercise requirements are:
 * No bids
 * Card combinations are Flash, Straight, Three of kind, Two pairs, Pair, High card.
 
-The application uses following lib/frameworks:
+Exercise doesn't specify app UI, so I did not spend time on nice look.
+
+The application uses following lib/frameworks (its are placed in lib/):
 
 * jquery for manipulations with DOM; 
 * underscorejs for work with collections;
 * twitter bootstrap as html/css framework;
 * jasminejs as testing framework;
-
-Exercise doesn't specify app UI, so I did not spend time on nice look.
-
 
 # Installation
 Just clone repository.
