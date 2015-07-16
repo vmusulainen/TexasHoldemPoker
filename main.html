@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title>Texas Hold'em Poker</title>
+
+    <link rel="stylesheet" href="lib/bootstrap-3.3.5/css/bootstrap.min.css">
+
+    <script src="lib/jquery-1.11.3.min.js"></script>
+    <script src="lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+
+    <script src="src/playingCard.js"></script>
+    <script src="src/deck.js"></script>
+    <script src="src/combinations.js"></script>
+    <script src="src/player.js"></script>
+    <script src="src/game.js"></script>
+    <script src="src/main.js"></script>
+</head>
+<body  style="font-family: monospace">
+<div class="container">
+    <div class="page-header"><h3>Texas Hold'em Poker</h3></div>
+
+    <div style="margin-bottom: 10px">
+        <button id="button" class="btn btn-lg btn-primary" onClick="gameStep()">Play</button>
+        <button class="pull-right btn btn-sm btn-default" onClick="autoPlay()">Auto play 1000 times</button>
+    </div>
+
+    <div id="desk"></div>
+</div>
+</body>
+</html>
