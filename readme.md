@@ -54,3 +54,21 @@ It needs to refactor code for rendering UI.
 Also, I think requirejs is needed. 
  
 No full test coverage. 
+
+
+# ROR implementation
+
+ROR implementation is in ruby directory
+
+it quite stinks :)
+
+Don't forget to run "rake db:migrate" before starting rails server
+
+From my point of view it is necessary redesign views, games_controller, etc
+
+Test coverage may seem strange (for example, here is no controller tests)
+
+Also, bug for three of kind combinations is fixed in ROR implementation 
+
+
+
