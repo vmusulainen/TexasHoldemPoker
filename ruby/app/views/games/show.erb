@@ -1,0 +1,29 @@
+<%= button_to 'Open Cards', {:action => 'open', :id => @game.id}, :method => :get %>
+
+<!-- it needs to move to style -->
+<div>&nbsp;</div>
+
+<!-- this is candidate to partial template -->
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Common Cards</h3>
+  </div>
+  <div class="panel-body">
+    <% common_cards.each do %>
+        <span class="label label-default">&nbsp;?&nbsp;</span>
+    <% end %>
+  </div>
+</div>
+
+<% players.each do |player| %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= player %></h3>
+      </div>
+      <div class="panel-body">
+        <% player_cards(player).each do |card| %>
+            <span class="label label-default"><%= card.name %></span>
+        <% end %>
+      </div>
+    </div>
+<% end %>

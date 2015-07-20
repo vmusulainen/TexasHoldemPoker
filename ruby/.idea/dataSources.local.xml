@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="development" uuid="425347c4-325e-4031-a51d-a1c02f14ce22">
+      <secret-storage>master_key</secret-storage>
+    </data-source>
+    <data-source name="Test" uuid="531ec271-3d4d-4e14-a4f6-75faa658bb88">
+      <secret-storage>master_key</secret-storage>
+    </data-source>
+  </component>
+</project>

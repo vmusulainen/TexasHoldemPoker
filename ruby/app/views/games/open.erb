@@ -1,0 +1,45 @@
+<%= button_to 'Play Again', {:action => 'new_game'}, :method => :get %>
+
+<!-- it needs to move to style -->
+<div>&nbsp;</div>
+
+<!-- this is candidate to partial template -->
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Common Cards</h3>
+  </div>
+  <div class="panel-body">
+    <% common_cards.each do |card| %>
+        <span class="label label-default"><%= card.name %></span>
+    <% end %>
+  </div>
+</div>
+
+<% if @game.winner == nil %>
+    <h1>No winner!</h1>
+<% end %>
+
+<% players.each do |player| %>
+    <div class="panel <%= player_panel_class(player) %>">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= player_panel_title(player) %></h3>
+      </div>
+      <div class="panel-body">
+        <div class="col-md-2">
+          <% player_cards(player).each do |card| %>
+              <span class="label label-default"><%= card.name %></span>
+          <% end %>
+        </div>
+        <div class="col-md-10">
+          <% player_card_combinations(player).each do |aCombination| %>
+              <div class="col-md-2"><%= aCombination.name %></div>
+              <div class="col-md-10">
+                <% aCombination.cards.each do |aCard| %>
+                    <span class="label<% if aCard.common? %> <%= 'label-default' %><% else %> <%= 'label-info' %> <% end %>"><%= aCard.name %></span>
+                <% end %>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+<% end %>
